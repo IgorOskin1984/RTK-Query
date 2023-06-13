@@ -3,7 +3,7 @@ import { useGetGoodsQuery } from './redux'
 
 function App() {
 	const [count, setCount] = useState('')
-	const { data, isLoading } = useGetGoodsQuery(count);
+	const { data = [], isLoading } = useGetGoodsQuery(count);
 	if (isLoading) return <h1>Loading...</h1>
 	return (
 		<div>
